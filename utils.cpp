@@ -22,6 +22,20 @@ int SelectEXE(HWND hwndDlg,char *filename){
 	return GetOpenFileName(&ofn);
 }
 
+int SelectTXT(HWND hwndDlg,char *filename){
+	OPENFILENAME ofn;
+	int result;
+	memset(&ofn, 0, sizeof(ofn));
+	ofn.lStructSize = sizeof(ofn);
+	ofn.hwndOwner = hwndDlg;
+	ofn.lpstrFilter = "文本文件(*.txt)\0*.txt\0所有文件\0*.*\0";
+	ofn.nFilterIndex = 1;
+	ofn.lpstrFile = filename;
+	ofn.nMaxFile = MAXLEN;
+	ofn.Flags = OFN_FILEMUSTEXIST | OFN_PATHMUSTEXIST | OFN_EXPLORER;
+	return GetOpenFileName(&ofn);
+}
+
 int SelectFolder(HWND hwndDlg,char *filename){
 	BROWSEINFO bi;
 	LPITEMIDLIST lpItemList;

@@ -31,3 +31,28 @@
 	"utils.h"
 	"resource.h"
 
+1534252353 source:d:\工程\c语言代码\wgetgui\main.cpp
+	<windows.h>
+	<commctrl.h>
+	<stdio.h>
+	"utils.h"
+	"resource.h"
+
+1534251646 d:\工程\c语言代码\wgetgui\utils.h
+
+1534252483 d:\工程\c语言代码\wgetgui\resource.h
+
+1534252483 source:d:\工程\c语言代码\wgetgui\resource.rc
+	<windows.h>
+	<commctrl.h>
+	<richedit.h>
+	"resource.h"
+
+1534251616 source:d:\工程\c语言代码\wgetgui\utils.cpp
+	<stdio.h>
+	<windows.h>
+	<commctrl.h>
+	<shlobj.h>
+	"utils.h"
+	"resource.h"
+

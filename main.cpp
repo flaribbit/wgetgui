@@ -7,6 +7,7 @@
 
 HINSTANCE hInst;
 char edit_exe[MAXLEN];
+char edit_txt[MAXLEN];
 char str_folder[MAXLEN];
 
 BOOL CALLBACK DlgMain(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
@@ -46,7 +47,7 @@ BOOL CALLBACK DlgMain(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
 			SetDlgItemText(hwndDlg,IDC_EDIT_EXE,edit_exe);
 		}
 		return TRUE;
-	
+
 		case WM_CLOSE:
 		{
 			FILE *fp;
@@ -109,6 +110,21 @@ BOOL CALLBACK DlgMain(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
 					if(SelectEXE(hwndDlg,edit_exe))
 						SetDlgItemText(hwndDlg,IDC_EDIT_EXE,edit_exe);
 					break;
+				case IDC_BUTTON_SEL_INPUT:
+					if(SelectTXT(hwndDlg,edit_txt))
+						SetDlgItemText(hwndDlg,IDC_EDIT_INPUT,edit_txt);
+					break;
+				case IDC_CHECKBOX1:{
+					int sta=IsDlgButtonChecked(hwndDlg,IDC_CHECKBOX1);
+					EnableWindow(GetDlgItem(hwndDlg,IDC_EDIT_INPUT),sta);
+					EnableWindow(GetDlgItem(hwndDlg,IDC_BUTTON_SEL_INPUT),sta);
+					break;
+				}
+				case IDM_EXIT:
+					SendMessage(hwndDlg,WM_CLOSE,0,0);
+					break;
+				case IDC_RUN:
+					MessageBox(hwndDlg,"还没写呢 你来打我呀 _(:з」∠)_","提示",MB_OK|MB_ICONINFORMATION);
 			}
 		}
 		return TRUE;
