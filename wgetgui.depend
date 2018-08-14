@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1534227031 source:d:\users\flyz\desktop\wgetgui\main.cpp
+	<windows.h>
+	<commctrl.h>
+	<stdio.h>
+	"utils.h"
+	"resource.h"
+
+1534166921 d:\users\flyz\desktop\wgetgui\resource.h
+
+1534166921 source:d:\users\flyz\desktop\wgetgui\resource.rc
+	<windows.h>
+	<commctrl.h>
+	<richedit.h>
+	"resource.h"
+
+1534166453 source:d:\users\flyz\desktop\wgetgui\utils.c
+	<stdio.h>
+	<windows.h>
+	<commctrl.h>
+	"utils.h"
+	"resource.h"
+
+1534222546 d:\users\flyz\desktop\wgetgui\utils.h
+
+1534222610 source:d:\users\flyz\desktop\wgetgui\utils.cpp
+	<stdio.h>
+	<windows.h>
+	<commctrl.h>
+	<shlobj.h>
+	"utils.h"
+	"resource.h"
+
